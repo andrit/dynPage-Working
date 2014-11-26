@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
 	
-	<title>Dynamic Page | Contact</title>
+	<title>PhilosophyStars | Contact</title>
 	
 	<link rel='stylesheet' type='text/css' href='css/style.css' />
 	
@@ -12,7 +12,7 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 	
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11/jquery.min.js'></script>
     <script type='text/javascript' src='js/modernizr.js'></script>
     <script type='text/javascript' src='js/dynamicpage.js'></script>
 </head>
@@ -24,13 +24,14 @@
 	<div id="page-wrap">
 
         <header>
-		  <h1>Dynamic Page</h1>
+		    <h1>PhilosophyStars</h1>
+		  <h3>Fostering the Thinkers of Today to Create a Better Tomorrow</h3>
 		
 		  <nav>
 		      <ul class="group">
 		          <li><a href="index.html">Home</a></li>
-		          <li><a href="about.html">About</a></li>
-		          <li><a href="contact.html">Contact</a></li>
+		          <li><a href="about.html">About PhilosophyStars</a></li>
+		          <li><a href="contact.html">Sign Up for the Tournament</a></li>
 		      </ul>
 		  </nav>
 		</header>
@@ -38,16 +39,131 @@
 		<section id="main-content">
 		<div id="guts">
 		
-			<form>
+			<form id="register">
+				<h1>Register for Philosophy Stars Tournament</h1>
+				  <fieldset> 
+				    <legend>Personal details</legend> 
+				    <div> 
+				        <label>First Name
+				        <input id="given-name" name="given-name" type="text" placeholder="First name only" required autofocus> 
+						</label>
+				    </div>
+				    <div> 
+				        <label>Last Name
+				        <input id="family-name" name="family-name" type="text" placeholder="Last name only" required autofocus> 
+						</label>
+				    </div>
+				    <div> 
+				    	<label>Date of Birth
+				        <input id="dob" name="dob" type="date" required>
+						</label>
+				    </div> 
+				    <div> 
+				        <label>Email 
+				        <input id="email" name="email" type="email" placeholder="example@domain.com" required>
+						</label> 
+				    </div> 
+				    <div> 
+				        <label>Blog URL 
+				        <input id="url" name="url" type="url" placeholder="http://mysite.com">
+						</label> 
+				    </div>    
+				    <div> 
+				        <label>Telephone 
+				        <input id="phone" name="phone" type="tel" placeholder="Eg. +447000 000000" required>
+						</label> 
+				    </div> 
+					<div>
+						<label>Shirt Size
+						<input id="shoes" name="shoes" type="number" min="5" max="18" step="0.5" value="9">
+						</label>
+					</div>
+					<div>
+						<label>Debating Skill level (1 low - 100 high)
+						<input id="skill" name="skill" type="range" min="1" max="100" value="0">
+						<output name="output" onforminput="value=a.value">0</output>
+						</label>
+					</div>
+					<div>
+						<label>Abstraction Skill level (1 low - 100 high)
+						<input id="skill" name="skill" type="range" min="1" max="100" value="0">
+						<output name="output" onforminput="value=a.value">0</output>
+						</label>
+					</div>
+				  </fieldset>
+				  <fieldset> 
+				    <legend>Billing address</legend> 
+				    <div> 
+				        <label>Address 
+				        <textarea id="address" name="address" rows=5 required></textarea>
+						</label> 
+				    </div> 
+				    <div> 
+				        <label>Zip code 
+				        <input id="zipCode" name="zipCode" type="text" required>
+						</label> 
+				    </div> 
+				    <div> 
+				        <label>Country 
+				        <input id="country" name="country" list="country-names" type="text" required> 
+				        <datalist id="country-names"> 
+				        	<option label="England" value="England"></option> 
+				        	<option label="Northern Ireland" value="Northern Ireland"></option> 
+				        	<option label="Ireland" value="Ireland"></option> 
+				        	<option label="Scotland" value="Scotland"></option> 
+				        	<option label="Wales" value="Wales"></option> 
+				        </datalist>
+						</label> 
+				    </div> 
+				  </fieldset> 
+				  <fieldset> 
+				    <legend>Registration Payment details</legend> 
+				    <fieldset> 
+				      <legend>Card type</legend> 
+				      <div class="card-type"> 
+				          <input id="visa" name="cardtype" type="radio"> 
+				          <label for="visa">VISA</label> 
+				          <input id="mastercard" name="cardtype" type="radio">
+				          <label for="mastercard">Mastercard</label> 
+				          <input id="amex" name="cardtype" type="radio"> 
+				          <label for="amex">AMEX</label>
+				      </div> 
+				    </fieldset>
+				    <div> 
+				        <label>Name
+				        <input id="cardName" name="cardName" type="text" placeholder="Name as it appears on your card" required>
+						</label>  
+				    </div>
+				    <div> 
+				        <label>Card number 
+				        <input id="cardNo" name="cardNo" type="number" required title="The sixteen digit number across the middle of your card."> 
+						</label>
+				    </div>
+				    <div> 
+				        <label>Security code 
+				        <input id="security" name="security" type="number" required pattern="[0-9]{3}" title="The last three digits on the back of your card.">
+						</label> 
+				    </div>
+				    <div> 
+				        <label>Expiry Date 
+				        <input id="expiry" name="expiry" type="month">
+						</label>
+				    </div>
+				  </fieldset> 
+				  <fieldset> 
+				  	<div> 
+					    <button type=submit>Sign Up Today!</button> 
+				    </div> 
+				  </fieldset> 
+				</form> 
 
-			</form>	
 		</div>
 		</section>
 		
 	</div>
 	
 	<footer>
-	  &copy;2014 Andrew Ritter
+	  &copy;2014 LoveWorks
 	</footer>
 
 </body>
